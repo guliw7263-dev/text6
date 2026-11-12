@@ -1,0 +1,214 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+header {
+    background: #101828;
+    padding: 20px 8%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 27px;
+}
+
+.logo span {
+    color: #00d4ff;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #00d4ff;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    background: linear-gradient(135deg, #101828, #175a91);
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #00d4ff;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #00bde9;
+    padding: 14px 28px;
+    border-radius: 8px;
+    color: #101828;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about, .services, .contact {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.about h2, .services h2, .contact h2 {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+    color: #555;
+}
+
+.service-container {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.service-card {
+    flex: 1;
+    background: white;
+    padding: 35px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #00000010;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input, .contact textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.contact textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact button {
+    padding: 15px;
+    border: none;
+    background: #101828;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#message {
+    margin-top: 15px;
+    color: green;
+}
+
+footer {
+    background: #101828;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+@media(max-width: 768px) {
+    .navbar ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #101828;
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+        z-index: 10;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .service-container {
+        flex-direction: column;
+    }
+}
